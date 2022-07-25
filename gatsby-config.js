@@ -7,6 +7,20 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-plugin-gatsby-cloud`,
+        options: {
+          headers: {
+            "/*": [
+              "cache-control: no-cache",
+            ],
+            "/my-page": [
+              // matching headers (by type) are replaced by Gatsby Cloud with more specific routes
+              "Basic-Auth: differentuser:differentpassword",
+            ],
+          },
+        }
+      },
     `gatsby-plugin-image`,
     {
       resolve: `gatsby-source-filesystem`,
