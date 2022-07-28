@@ -10,9 +10,10 @@ module.exports = {
     {
       resolve: `gatsby-plugin-gatsby-cloud`,
         options: {
+          mergeCachingHeaders: false,
           headers: {
-            "/*": [
-              "cache-control: no-cache",
+            "/page-data.json": [
+              "Cache-Control: no-cache",
             ],
             "/my-page": [
               // matching headers (by type) are replaced by Gatsby Cloud with more specific routes
