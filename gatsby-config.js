@@ -12,12 +12,8 @@ module.exports = {
         options: {
           mergeCachingHeaders: false,
           headers: {
-            "/page-data.json": [
-              "Cache-Control: no-cache",
-            ],
-            "/my-page": [
-              // matching headers (by type) are replaced by Gatsby Cloud with more specific routes
-              "Basic-Auth: differentuser:differentpassword",
+            "/page-data/*": [
+              `Cache-Control: no-cache`,
             ],
           },
         }
