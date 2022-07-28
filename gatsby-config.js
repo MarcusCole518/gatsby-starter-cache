@@ -15,6 +15,9 @@ module.exports = {
             "/": [
               `Cache-Control: no-cache`,
             ],
+            "/page-data/*": [
+              `Cache-Control: no-cache`
+            ],
           },
         }
       },
