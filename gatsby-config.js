@@ -12,7 +12,7 @@ module.exports = {
         options: {
           mergeCachingHeaders: false,
           headers: {
-            "/page-data/*": [
+            "/*": [
               `Cache-Control: no-cache`,
             ],
           },
